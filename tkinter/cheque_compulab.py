@@ -9,7 +9,7 @@ main_title.pack()
 
 #creamos la imgen
 imagen =PhotoImage(file="compulab.png")
-lblimagen=Label(mywindow,image=imagen).place(x=10,y=-10, width="100", height="50")
+lblimagen=Label(mywindow,image=imagen).place(x=10,y=-3, width="100", height="50")
 
 
 def send_data():
@@ -43,18 +43,22 @@ nombre = StringVar()
 cantidad_letras = StringVar()
 concepto = StringVar()
 nombre_cuenta = StringVar()
+dinero = StringVar()
 
 
 nombre_entry = Entry(textvariable=nombre, width="40")
 cantidad_letras_entry = Entry(textvariable=cantidad_letras, width="40")
 concepto_entry = Entry(textvariable=concepto, width="40")
+dinero_entry = Entry(textvariable=dinero, width="10")
 
 nombre_entry.place(x=80, y=70)
 cantidad_letras_entry.place(x=130, y=100)
 concepto_entry.place(x=130, y=130)
+dinero_entry.place(x=520, y=100)
 
 # Submit Button
 submit_btn = Button(mywindow,text = "Submit Info", width = "10", height = "2", command = send_data, bg = "#F5C6AA")
 submit_btn.place(x = 22, y = 320)
 
 mywindow.mainloop()
+
